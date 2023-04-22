@@ -13,83 +13,83 @@ public class ExpensesModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     @Column(nullable = false, precision = 4)
-    private int ano_movimentacao;
+    private int anoMovimentacao;
     @Column(nullable = false, precision = 2)
-    private int mes_movimentacao;
+    private int mesMovimentacao;
     @Column(nullable = false, precision = 3)
-    private int orgao_codigo;
+    private int orgaoCodigo;
     @Column(nullable = false, length = 90)
-    private String orgao_nome;
+    private String orgaoNome;
     @Column(nullable = false, precision = 5)
-    private float unidade_codigo;
+    private float unidadeCodigo;
     @Column(nullable = false, length = 98)
-    private String unidade_nome;
+    private String unidadeNome;
     @Column(nullable = false, precision = 2)
-    private int categoria_economica_codigo;
+    private int categoriaEconomicaCodigo;
     @Column(nullable = false, length = 19)
-    private String categoria_economica_nome;
+    private String categoriaEconomicaNome;
     @Column(nullable = false, precision = 2)
-    private int grupo_despesa_codigo;
+    private int grupoDespesaCodigo;
     @Column(nullable = false, length = 26)
-    private String grupo_despesa_nome;
+    private String grupoDespesaNome;
     @Column(nullable = false, precision = 2)
-    private int modalidade_aplicacao_codigo;
+    private int modalidadeAplicacaoCodigo;
     @Column(nullable = false, length = 26)
-    private String modalidade_aplicacao_nome;
+    private String modalidadeAplicacaoNome;
     @Column(nullable = false, precision = 2)
-    private int elemento_codigo;
+    private int elementoCodigo;
     @Column(nullable = false, length = 67)
-    private String elemento_nome;
+    private String elementoNome;
     @Column(nullable = false, precision = 2)
-    private int subelemento_codigo;
+    private int subelementoCodigo;
     @Column(nullable = false, length = 90)
-    private String subelemento_nome;
+    private String subelementoNome;
     @Column(nullable = false, precision = 2)
-    private int funcao_codigo;
+    private int funcaoCodigo;
     @Column(nullable = false, length = 21)
-    private String funcao_nome;
+    private String funcaoNome;
     @Column(nullable = false, precision = 4)
-    private int subfuncao_codigo;
+    private int subfuncaoCodigo;
     @Column(nullable = false, length = 48)
-    private String subfuncao_nome;
+    private String subfuncaoNome;
     @Column(nullable = false, precision = 4)
-    private int programa_codigo;
+    private int programaCodigo;
     @Column(nullable = false, length = 104)
-    private String programa_nome;
+    private String programaNome;
     @Column(nullable = false, precision = 4)
-    private int acao_codigo;
+    private int acaoCodigo;
     @Column(nullable = false, length = 129)
-    private String acao_nome;
+    private String acaoNome;
     @Column(nullable = false, precision = 4)
-    private int fonte_recurso_codigo;
+    private int fonteRecursoCodigo;
     @Column(nullable = false, length = 55)
-    private String fonte_recurso_nome;
+    private String fonteRecursoNome;
     @Column(nullable = false, precision = 4)
-    private int empenho_ano;
+    private int empenhoAno;
     @Column(nullable = false, length = 21)
-    private String empenho_modalidade_nome;
+    private String empenhoModalidadeNome;
     @Column(nullable = false, precision = 2)
-    private int empenho_modalidade_codigo;
+    private int empenhoModalidadeCodigo;
     @Column(nullable = false, precision = 6)
-    private int empenho_numero;
+    private int empenhoNumero;
     @Column(nullable = false, precision = 4)
     private int subempenho;
     @Column(nullable = false, length = 1)
-    private String indicador_subempenho;
+    private String indicadorSubempenho;
     @Column(nullable = false, precision = 8)
-    private int credor_codigo;
+    private int credorCodigo;
     @Column(nullable = false, length = 118)
-    private String credor_nome;
+    private String credorNome;
     @Column(nullable = false, precision = 4)
-    private int modalidade_licitacao_codigo;
+    private int modalidadeLicitacaoCodigo;
     @Column(nullable = false, length = 31)
-    private String modalidade_licitacao_nome;
+    private String modalidadeLicitacaoNome;
     @Column(nullable = false, precision = 12)
-    private float valor_empenhado;
+    private float valorEmpenhado;
     @Column(nullable = false, precision = 11)
-    private float valor_liquidado;
+    private float valorLiquidado;
     @Column(nullable = false, precision = 11)
-    private float valor_pago;
+    private float valorPago;
 
     public UUID getId() {
         return id;
@@ -99,244 +99,244 @@ public class ExpensesModel {
         this.id = id;
     }
 
-    public int getAno_movimentacao() {
-        return ano_movimentacao;
+    public int getanoMovimentacao() {
+        return anoMovimentacao;
     }
 
-    public void setAno_movimentacao(int ano_movimentacao) {
-        this.ano_movimentacao = ano_movimentacao;
+    public void setanoMovimentacao(int anoMovimentacao) {
+        this.anoMovimentacao = anoMovimentacao;
     }
 
-    public int getMes_movimentacao() {
-        return mes_movimentacao;
+    public int getmesMovimentacao() {
+        return mesMovimentacao;
     }
 
-    public void setMes_movimentacao(int mes_movimentacao) {
-        this.mes_movimentacao = mes_movimentacao;
+    public void setmesMovimentacao(int mesMovimentacao) {
+        this.mesMovimentacao = mesMovimentacao;
     }
 
-    public int getOrgao_codigo() {
-        return orgao_codigo;
+    public int getorgaoCodigo() {
+        return orgaoCodigo;
     }
 
-    public void setOrgao_codigo(int orgao_codigo) {
-        this.orgao_codigo = orgao_codigo;
+    public void setorgaoCodigo(int orgaoCodigo) {
+        this.orgaoCodigo = orgaoCodigo;
     }
 
-    public String getOrgao_nome() {
-        return orgao_nome;
+    public String getorgaoNome() {
+        return orgaoNome;
     }
 
-    public void setOrgao_nome(String orgao_nome) {
-        this.orgao_nome = orgao_nome;
+    public void setorgaoNome(String orgaoNome) {
+        this.orgaoNome = orgaoNome;
     }
 
-    public float getUnidade_codigo() {
-        return unidade_codigo;
+    public float getunidadeCodigo() {
+        return unidadeCodigo;
     }
 
-    public void setUnidade_codigo(float unidade_codigo) {
-        this.unidade_codigo = unidade_codigo;
+    public void setunidadeCodigo(float unidadeCodigo) {
+        this.unidadeCodigo = unidadeCodigo;
     }
 
-    public String getUnidade_nome() {
-        return unidade_nome;
+    public String getunidadeNome() {
+        return unidadeNome;
     }
 
-    public void setUnidade_nome(String unidade_nome) {
-        this.unidade_nome = unidade_nome;
+    public void setunidadeNome(String unidadeNome) {
+        this.unidadeNome = unidadeNome;
     }
 
-    public int getCategoria_economica_codigo() {
-        return categoria_economica_codigo;
+    public int getcategoriaEconomicaCodigo() {
+        return categoriaEconomicaCodigo;
     }
 
-    public void setCategoria_economica_codigo(int categoria_economica_codigo) {
-        this.categoria_economica_codigo = categoria_economica_codigo;
+    public void setcategoriaEconomicaCodigo(int categoriaEconomicaCodigo) {
+        this.categoriaEconomicaCodigo = categoriaEconomicaCodigo;
     }
 
-    public String getCategoria_economica_nome() {
-        return categoria_economica_nome;
+    public String getcategoriaEconomicaNome() {
+        return categoriaEconomicaNome;
     }
 
-    public void setCategoria_economica_nome(String categoria_economica_nome) {
-        this.categoria_economica_nome = categoria_economica_nome;
+    public void setcategoriaEconomicaNome(String categoriaEconomicaNome) {
+        this.categoriaEconomicaNome = categoriaEconomicaNome;
     }
 
-    public int getGrupo_despesa_codigo() {
-        return grupo_despesa_codigo;
+    public int getgrupoDespesaCodigo() {
+        return grupoDespesaCodigo;
     }
 
-    public void setGrupo_despesa_codigo(int grupo_despesa_codigo) {
-        this.grupo_despesa_codigo = grupo_despesa_codigo;
+    public void setgrupoDespesaCodigo(int grupoDespesaCodigo) {
+        this.grupoDespesaCodigo = grupoDespesaCodigo;
     }
 
-    public String getGrupo_despesa_nome() {
-        return grupo_despesa_nome;
+    public String getgrupoDespesaNome() {
+        return grupoDespesaNome;
     }
 
-    public void setGrupo_despesa_nome(String grupo_despesa_nome) {
-        this.grupo_despesa_nome = grupo_despesa_nome;
+    public void setgrupoDespesaNome(String grupoDespesaNome) {
+        this.grupoDespesaNome = grupoDespesaNome;
     }
 
-    public int getModalidade_aplicacao_codigo() {
-        return modalidade_aplicacao_codigo;
+    public int getmodalidadeAplicacaoCodigo() {
+        return modalidadeAplicacaoCodigo;
     }
 
-    public void setModalidade_aplicacao_codigo(int modalidade_aplicacao_codigo) {
-        this.modalidade_aplicacao_codigo = modalidade_aplicacao_codigo;
+    public void setmodalidadeAplicacaoCodigo(int modalidadeAplicacaoCodigo) {
+        this.modalidadeAplicacaoCodigo = modalidadeAplicacaoCodigo;
     }
 
-    public String getModalidade_aplicacao_nome() {
-        return modalidade_aplicacao_nome;
+    public String getmodalidadeAplicacaoNome() {
+        return modalidadeAplicacaoNome;
     }
 
-    public void setModalidade_aplicacao_nome(String modalidade_aplicacao_nome) {
-        this.modalidade_aplicacao_nome = modalidade_aplicacao_nome;
+    public void setmodalidadeAplicacaoNome(String modalidadeAplicacaoNome) {
+        this.modalidadeAplicacaoNome = modalidadeAplicacaoNome;
     }
 
-    public int getElemento_codigo() {
-        return elemento_codigo;
+    public int getelementoCodigo() {
+        return elementoCodigo;
     }
 
-    public void setElemento_codigo(int elemento_codigo) {
-        this.elemento_codigo = elemento_codigo;
+    public void setelementoCodigo(int elementoCodigo) {
+        this.elementoCodigo = elementoCodigo;
     }
 
-    public String getElemento_nome() {
-        return elemento_nome;
+    public String getelementoNome() {
+        return elementoNome;
     }
 
-    public void setElemento_nome(String elemento_nome) {
-        this.elemento_nome = elemento_nome;
+    public void setelementoNome(String elementoNome) {
+        this.elementoNome = elementoNome;
     }
 
-    public int getSubelemento_codigo() {
-        return subelemento_codigo;
+    public int getSubelementoCodigo() {
+        return subelementoCodigo;
     }
 
-    public void setSubelemento_codigo(int subelemento_codigo) {
-        this.subelemento_codigo = subelemento_codigo;
+    public void setSubelementoCodigo(int subelementoCodigo) {
+        this.subelementoCodigo = subelementoCodigo;
     }
 
-    public String getSubelemento_nome() {
-        return subelemento_nome;
+    public String getSubelementoNome() {
+        return subelementoNome;
     }
 
-    public void setSubelemento_nome(String subelemento_nome) {
-        this.subelemento_nome = subelemento_nome;
+    public void setSubelementoNome(String subelementoNome) {
+        this.subelementoNome = subelementoNome;
     }
 
-    public int getFuncao_codigo() {
-        return funcao_codigo;
+    public int getfuncaoCodigo() {
+        return funcaoCodigo;
     }
 
-    public void setFuncao_codigo(int funcao_codigo) {
-        this.funcao_codigo = funcao_codigo;
+    public void setfuncaoCodigo(int funcaoCodigo) {
+        this.funcaoCodigo = funcaoCodigo;
     }
 
-    public String getFuncao_nome() {
-        return funcao_nome;
+    public String getfuncaoNome() {
+        return funcaoNome;
     }
 
-    public void setFuncao_nome(String funcao_nome) {
-        this.funcao_nome = funcao_nome;
+    public void setfuncaoNome(String funcaoNome) {
+        this.funcaoNome = funcaoNome;
     }
 
-    public int getSubfuncao_codigo() {
-        return subfuncao_codigo;
+    public int getSubfuncaoCodigo() {
+        return subfuncaoCodigo;
     }
 
-    public void setSubfuncao_codigo(int subfuncao_codigo) {
-        this.subfuncao_codigo = subfuncao_codigo;
+    public void setSubfuncaoCodigo(int subfuncaoCodigo) {
+        this.subfuncaoCodigo = subfuncaoCodigo;
     }
 
-    public String getSubfuncao_nome() {
-        return subfuncao_nome;
+    public String getSubfuncaoNome() {
+        return subfuncaoNome;
     }
 
-    public void setSubfuncao_nome(String subfuncao_nome) {
-        this.subfuncao_nome = subfuncao_nome;
+    public void setSubfuncaoNome(String subfuncaoNome) {
+        this.subfuncaoNome = subfuncaoNome;
     }
 
-    public int getPrograma_codigo() {
-        return programa_codigo;
+    public int getprogramaCodigo() {
+        return programaCodigo;
     }
 
-    public void setPrograma_codigo(int programa_codigo) {
-        this.programa_codigo = programa_codigo;
+    public void setprogramaCodigo(int programaCodigo) {
+        this.programaCodigo = programaCodigo;
     }
 
-    public String getPrograma_nome() {
-        return programa_nome;
+    public String getprogramaNome() {
+        return programaNome;
     }
 
-    public void setPrograma_nome(String programa_nome) {
-        this.programa_nome = programa_nome;
+    public void setprogramaNome(String programaNome) {
+        this.programaNome = programaNome;
     }
 
-    public int getAcao_codigo() {
-        return acao_codigo;
+    public int getacaoCodigo() {
+        return acaoCodigo;
     }
 
-    public void setAcao_codigo(int acao_codigo) {
-        this.acao_codigo = acao_codigo;
+    public void setacaoCodigo(int acaoCodigo) {
+        this.acaoCodigo = acaoCodigo;
     }
 
-    public String getAcao_nome() {
-        return acao_nome;
+    public String getacaoNome() {
+        return acaoNome;
     }
 
-    public void setAcao_nome(String acao_nome) {
-        this.acao_nome = acao_nome;
+    public void setacaoNome(String acaoNome) {
+        this.acaoNome = acaoNome;
     }
 
-    public int getFonte_recurso_codigo() {
-        return fonte_recurso_codigo;
+    public int getfonteRecursoCodigo() {
+        return fonteRecursoCodigo;
     }
 
-    public void setFonte_recurso_codigo(int fonte_recurso_codigo) {
-        this.fonte_recurso_codigo = fonte_recurso_codigo;
+    public void setfonteRecursoCodigo(int fonteRecursoCodigo) {
+        this.fonteRecursoCodigo = fonteRecursoCodigo;
     }
 
-    public String getFonte_recurso_nome() {
-        return fonte_recurso_nome;
+    public String getfonteRecursoNome() {
+        return fonteRecursoNome;
     }
 
-    public void setFonte_recurso_nome(String fonte_recurso_nome) {
-        this.fonte_recurso_nome = fonte_recurso_nome;
+    public void setfonteRecursoNome(String fonteRecursoNome) {
+        this.fonteRecursoNome = fonteRecursoNome;
     }
 
-    public int getEmpenho_ano() {
-        return empenho_ano;
+    public int getempenhoAno() {
+        return empenhoAno;
     }
 
-    public void setEmpenho_ano(int empenho_ano) {
-        this.empenho_ano = empenho_ano;
+    public void setempenhoAno(int empenhoAno) {
+        this.empenhoAno = empenhoAno;
     }
 
-    public String getEmpenho_modalidade_nome() {
-        return empenho_modalidade_nome;
+    public String getempenhoModalidadeNome() {
+        return empenhoModalidadeNome;
     }
 
-    public void setEmpenho_modalidade_nome(String empenho_modalidade_nome) {
-        this.empenho_modalidade_nome = empenho_modalidade_nome;
+    public void setempenhoModalidadeNome(String empenhoModalidadeNome) {
+        this.empenhoModalidadeNome = empenhoModalidadeNome;
     }
 
-    public int getEmpenho_modalidade_codigo() {
-        return empenho_modalidade_codigo;
+    public int getempenhoModalidadeCodigo() {
+        return empenhoModalidadeCodigo;
     }
 
-    public void setEmpenho_modalidade_codigo(int empenho_modalidade_codigo) {
-        this.empenho_modalidade_codigo = empenho_modalidade_codigo;
+    public void setempenhoModalidadeCodigo(int empenhoModalidadeCodigo) {
+        this.empenhoModalidadeCodigo = empenhoModalidadeCodigo;
     }
 
-    public int getEmpenho_numero() {
-        return empenho_numero;
+    public int getempenhoNumero() {
+        return empenhoNumero;
     }
 
-    public void setEmpenho_numero(int empenho_numero) {
-        this.empenho_numero = empenho_numero;
+    public void setempenhoNumero(int empenhoNumero) {
+        this.empenhoNumero = empenhoNumero;
     }
 
     public int getSubempenho() {
@@ -347,67 +347,67 @@ public class ExpensesModel {
         this.subempenho = subempenho;
     }
 
-    public String getIndicador_subempenho() {
-        return indicador_subempenho;
+    public String getindicadorSubempenho() {
+        return indicadorSubempenho;
     }
 
-    public void setIndicador_subempenho(String indicador_subempenho) {
-        this.indicador_subempenho = indicador_subempenho;
+    public void setindicadorSubempenho(String indicadorSubempenho) {
+        this.indicadorSubempenho = indicadorSubempenho;
     }
 
-    public int getCredor_codigo() {
-        return credor_codigo;
+    public int getcredorCodigo() {
+        return credorCodigo;
     }
 
-    public void setCredor_codigo(int credor_codigo) {
-        this.credor_codigo = credor_codigo;
+    public void setcredorCodigo(int credorCodigo) {
+        this.credorCodigo = credorCodigo;
     }
 
-    public String getCredor_nome() {
-        return credor_nome;
+    public String getcredorNome() {
+        return credorNome;
     }
 
-    public void setCredor_nome(String credor_nome) {
-        this.credor_nome = credor_nome;
+    public void setcredorNome(String credorNome) {
+        this.credorNome = credorNome;
     }
 
-    public int getModalidade_licitacao_codigo() {
-        return modalidade_licitacao_codigo;
+    public int getmodalidadeLicitacaoCodigo() {
+        return modalidadeLicitacaoCodigo;
     }
 
-    public void setModalidade_licitacao_codigo(int modalidade_licitacao_codigo) {
-        this.modalidade_licitacao_codigo = modalidade_licitacao_codigo;
+    public void setmodalidadeLicitacaoCodigo(int modalidadeLicitacaoCodigo) {
+        this.modalidadeLicitacaoCodigo = modalidadeLicitacaoCodigo;
     }
 
-    public String getModalidade_licitacao_nome() {
-        return modalidade_licitacao_nome;
+    public String getmodalidadeLicitacaoNome() {
+        return modalidadeLicitacaoNome;
     }
 
-    public void setModalidade_licitacao_nome(String modalidade_licitacao_nome) {
-        this.modalidade_licitacao_nome = modalidade_licitacao_nome;
+    public void setmodalidadeLicitacaoNome(String modalidadeLicitacaoNome) {
+        this.modalidadeLicitacaoNome = modalidadeLicitacaoNome;
     }
 
-    public float getValor_empenhado() {
-        return valor_empenhado;
+    public float getvalorEmpenhado() {
+        return valorEmpenhado;
     }
 
-    public void setValor_empenhado(float valor_empenhado) {
-        this.valor_empenhado = valor_empenhado;
+    public void setvalorEmpenhado(float valorEmpenhado) {
+        this.valorEmpenhado = valorEmpenhado;
     }
 
-    public float getValor_liquidado() {
-        return valor_liquidado;
+    public float getvalorLiquidado() {
+        return valorLiquidado;
     }
 
-    public void setValor_liquidado(float valor_liquidado) {
-        this.valor_liquidado = valor_liquidado;
+    public void setvalorLiquidado(float valorLiquidado) {
+        this.valorLiquidado = valorLiquidado;
     }
 
-    public float getValor_pago() {
-        return valor_pago;
+    public float getvalorPago() {
+        return valorPago;
     }
 
-    public void setValor_pago(float valor_pago) {
-        this.valor_pago = valor_pago;
+    public void setvalorPago(float valorPago) {
+        this.valorPago = valorPago;
     }
 }
