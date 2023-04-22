@@ -25,4 +25,8 @@ public class ExpensesService {
     public Page<ExpensesModel> findByCategory(Pageable pageable, int categoriaEconomicaCodigo) {
         return expensesRepository.findByCategoriaEconomicaCodigo(pageable, categoriaEconomicaCodigo);
     }
+
+    public Page<ExpensesModel> findBySource(Pageable pageable, int fonteRecursoCodigo) {
+        return expensesRepository.findByFonteRecursoCodigo(pageable, fonteRecursoCodigo);
+    }
 }

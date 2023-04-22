@@ -12,4 +12,6 @@ public interface ExpensesRepository extends JpaRepository<ExpensesModel, UUID> {
     Page<ExpensesModel> findByMesMovimentacao(Pageable pageable, int mesMovimentacao);
 
     Page<ExpensesModel> findByCategoriaEconomicaCodigo(Pageable pageable, int categoriaEconomicaCodigo);
+
+    Page<ExpensesModel> findByFonteRecursoCodigo(Pageable pageable, int fonteRecursoCodigo);
 }

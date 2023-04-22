@@ -38,4 +38,10 @@ public class ExpensesController {
                                                                      @PathVariable(value = "category") int categoriaEconomicaCodigo) {
         return ResponseEntity.status(HttpStatus.OK).body(expensesService.findByCategory(pageable, categoriaEconomicaCodigo));
     }
+
+    @GetMapping("/source/{source}")
+    public ResponseEntity<Page<ExpensesModel>> getExpensesBySource(@PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC) Pageable pageable,
+                                                                     @PathVariable(value = "source") int fonteRecursoCodigo) {
+        return ResponseEntity.status(HttpStatus.OK).body(expensesService.findBySource(pageable, fonteRecursoCodigo));
+    }
 }
