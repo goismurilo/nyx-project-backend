@@ -6,6 +6,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ExpensesService {
     final ExpensesRepository expensesRepository;
@@ -28,5 +30,13 @@ public class ExpensesService {
 
     public Page<ExpensesModel> findBySource(Pageable pageable, int fonteRecursoCodigo) {
         return expensesRepository.findByFonteRecursoCodigo(pageable, fonteRecursoCodigo);
+    }
+
+    public Page<ExpensesModel> findBySources(Pageable pageable, int fonteRecursoCodigo) {
+        return expensesRepository.findByFonteRecursoCodigo(pageable, fonteRecursoCodigo);
+    }
+
+    public List<Number[]> getTotalAmount() {
+        return expensesRepository.getTotalAmountExpenses();
     }
 }

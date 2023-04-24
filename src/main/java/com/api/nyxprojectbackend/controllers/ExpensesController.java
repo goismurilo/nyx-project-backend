@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.*;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -27,6 +27,21 @@ public class ExpensesController {
         return ResponseEntity.status(HttpStatus.OK).body(expensesService.findAll(pageable));
     }
 
+    @GetMapping("/amount")
+    public ResponseEntity<Object> getTotalAmountExpenses() {
+        var result = expensesService.getTotalAmount();
+
+        Map<String, Number> response = new HashMap<>();
+
+        for(Number[] info: result) {
+            response.put("pledged", info[0]);
+            response.put("paidOff", info[1]);
+            response.put("paid", info[2]);
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(response);
+    }
+
     @GetMapping("/month/{month}")
     public ResponseEntity<Page<ExpensesModel>> getExpensesByMonth(@PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC) Pageable pageable,
                                                                   @PathVariable(value = "month") int mesMovimentacao) {
@@ -41,7 +56,7 @@ public class ExpensesController {
 
     @GetMapping("/source/{source}")
     public ResponseEntity<Page<ExpensesModel>> getExpensesBySource(@PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC) Pageable pageable,
-                                                                     @PathVariable(value = "source") int fonteRecursoCodigo) {
+                                                                   @PathVariable(value = "source") int fonteRecursoCodigo) {
         return ResponseEntity.status(HttpStatus.OK).body(expensesService.findBySource(pageable, fonteRecursoCodigo));
     }
 }

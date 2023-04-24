@@ -4,7 +4,9 @@ import com.api.nyxprojectbackend.models.ExpensesModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface ExpensesRepository extends JpaRepository<ExpensesModel, UUID> {
@@ -14,4 +16,11 @@ public interface ExpensesRepository extends JpaRepository<ExpensesModel, UUID> {
     Page<ExpensesModel> findByCategoriaEconomicaCodigo(Pageable pageable, int categoriaEconomicaCodigo);
 
     Page<ExpensesModel> findByFonteRecursoCodigo(Pageable pageable, int fonteRecursoCodigo);
+
+    @Query(value = "SELECT SUM(valor_empenhado), SUM(valor_liquidado), SUM(valor_pago) FROM tb_expenses_recife",
+    nativeQuery = true)
+    List<Number[]> getTotalAmountExpenses();
+
+
+//    Page<ExpensesModel> findGroupByCategoryWithJPQL();
 }
