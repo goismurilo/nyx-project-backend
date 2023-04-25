@@ -21,6 +21,8 @@ public interface ExpensesRepository extends JpaRepository<ExpensesModel, UUID> {
     nativeQuery = true)
     List<Number[]> getTotalAmountExpenses();
 
-
-//    Page<ExpensesModel> findGroupByCategoryWithJPQL();
+    @Query(value = "SELECT COUNT(categoria_economica_codigo), categoria_economica_codigo, categoria_economica_nome, SUM(valor_empenhado), SUM(valor_liquidado), SUM(valor_pago)" +
+            "FROM tb_expenses_recife  GROUP BY categoria_economica_codigo",
+            nativeQuery = true)
+    List<Object[]> getInfoCategories();
 }

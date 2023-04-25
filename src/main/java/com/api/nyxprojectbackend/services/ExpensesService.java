@@ -39,4 +39,8 @@ public class ExpensesService {
     public List<Number[]> getTotalAmount() {
         return expensesRepository.getTotalAmountExpenses();
     }
+
+    public List<Object[]> getInfoCategories() {
+        return expensesRepository.getInfoCategories();
+    }
 }
