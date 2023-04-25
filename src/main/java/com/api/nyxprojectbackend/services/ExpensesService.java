@@ -43,4 +43,12 @@ public class ExpensesService {
     public List<Object[]> getInfoCategories() {
         return expensesRepository.getInfoCategories();
     }
+
+    public List<Object[]> getInfoSource() {
+        return expensesRepository.getInfoSource();
+    }
+
+    public List<Object[]> getInfoMonth() {
+        return expensesRepository.getInfoMonth();
+    }
 }

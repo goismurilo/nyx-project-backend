@@ -1,6 +1,7 @@
 package com.api.nyxprojectbackend.controllers;
 
 import com.api.nyxprojectbackend.models.ExpensesModel;
+import com.api.nyxprojectbackend.models.RequestInfoModel;
 import com.api.nyxprojectbackend.models.ResponseInfo;
 import com.api.nyxprojectbackend.services.ExpensesService;
 import org.springframework.data.domain.Page;
@@ -56,9 +57,18 @@ public class ExpensesController {
         return ResponseEntity.status(HttpStatus.OK).body(expensesService.findByCategory(pageable, categoriaEconomicaCodigo));
     }
 
-    @GetMapping("/category/info")
-    public ResponseEntity<List<ResponseInfo>> getInfoCategories() {
-        var result = expensesService.getInfoCategories();
+    @GetMapping("/info")
+    public ResponseEntity<List<ResponseInfo>> getInfoCategories(RequestInfoModel params) {
+        List<Object[]> result;
+
+        if (params.getName().equals("month")) {
+            result = expensesService.getInfoMonth();
+        } else if (params.getName().equals("category")) {
+            result = expensesService.getInfoCategories();
+        } else {
+//      } else if (params.getName().equals("source")) {
+            result = expensesService.getInfoSource();
+        }
 
         List<ResponseInfo> response = new ArrayList<>();
 

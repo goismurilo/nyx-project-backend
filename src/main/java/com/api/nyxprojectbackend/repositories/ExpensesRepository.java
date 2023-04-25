@@ -25,4 +25,14 @@ public interface ExpensesRepository extends JpaRepository<ExpensesModel, UUID> {
             "FROM tb_expenses_recife  GROUP BY categoria_economica_codigo",
             nativeQuery = true)
     List<Object[]> getInfoCategories();
+
+    @Query(value = "SELECT COUNT(fonte_recurso_codigo), fonte_recurso_codigo, fonte_recurso_nome, SUM(valor_empenhado), SUM(valor_liquidado), SUM(valor_pago)" +
+            "FROM tb_expenses_recife  GROUP BY fonte_recurso_codigo",
+            nativeQuery = true)
+    List<Object[]> getInfoSource();
+    @Query(value = "SELECT COUNT(mes_movimentacao), mes_movimentacao, CAST(mes_movimentacao AS VARCHAR(10)), SUM(valor_empenhado), SUM(valor_liquidado), SUM(valor_pago)" +
+            "FROM tb_expenses_recife  GROUP BY mes_movimentacao",
+            nativeQuery = true)
+    List<Object[]> getInfoMonth();
 }
+
