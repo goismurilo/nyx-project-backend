@@ -2,7 +2,7 @@ package com.api.nyxprojectbackend.models;
 
 import java.math.BigDecimal;
 
-public class ResponseInfo {
+public class ResponseInfoModel {
     private Long numbers;
     private int code;
     private String name;
@@ -11,7 +11,7 @@ public class ResponseInfo {
     private BigDecimal paidOff;
     private BigDecimal paid;
 
-    public ResponseInfo(Long numbers, Integer code, String name, BigDecimal pledged, BigDecimal paidOff, BigDecimal paid) {
+    public ResponseInfoModel(Long numbers, Integer code, String name, BigDecimal pledged, BigDecimal paidOff, BigDecimal paid) {
         setNumbers(numbers);
         setCode(code);
         setName(name);

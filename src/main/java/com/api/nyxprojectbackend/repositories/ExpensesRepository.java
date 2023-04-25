@@ -1,6 +1,7 @@
 package com.api.nyxprojectbackend.repositories;
 
 import com.api.nyxprojectbackend.models.ExpensesModel;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,6 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 import java.util.UUID;
 
+@Tag(name = "Expenses")
 public interface ExpensesRepository extends JpaRepository<ExpensesModel, UUID> {
 
     Page<ExpensesModel> findByMesMovimentacao(Pageable pageable, int mesMovimentacao);
